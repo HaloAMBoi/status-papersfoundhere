@@ -5,12 +5,12 @@
   },
   "services": [
     {
-      "name": "Main Website",
+      "name": "Past Papers Site",
       "link": "https://www.papersfoundhere.org",
       "status": "Operational"
     },
     {
-      "name": "Paper Lookup Service",
+      "name": "Paper Lookup Tool",
       "link": "https://lookup.papersfoundhere.org",
       "status": "Operational"
     }
@@ -20,7 +20,7 @@
   "history": [
     {
       "date": "10/09/2025",
-      "service": "Paper Lookup Service",
+      "service": "Past Papers Site",
       "title": "Scheduled Maintenance Completed"
     },
     {
@@ -30,7 +30,7 @@
     },
     {
       "date": "06/09/2025",
-      "service": "Lookup Service",
+      "service": "Paper Lookup Tool",
       "title": "Resolved Minor Performance Issue"
     }
   ]
