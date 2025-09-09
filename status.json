@@ -1,7 +1,7 @@
 {
   "global": {
-    "message": "Under Maintenance",
-    "level": "blue"
+    "level": "blue",
+    "message": "System Maintenance Ongoing"
   },
   "services": [
     {
@@ -18,8 +18,8 @@
   "active": [
     {
       "service": "Lookup Service",
-      "title": "Under Maintenance",
       "type": "maintenance",
+      "title": "Under Maintenance",
       "timeline": [
         {
           "time": "10:46 PM (GMT+3)",
@@ -32,6 +32,16 @@
           "message": "Our team has completed 90% of transition work to our new system."
         }
       ]
+    }
+  ],
+  "upcoming": [
+    {
+      "title": "Database Upgrade",
+      "type": "maintenance",
+      "scheduled_for": "2025-09-15T22:00:00Z",
+      "expected_duration": "2 hours",
+      "affects": ["Main Website", "Lookup Service"],
+      "message": "We will be upgrading the database servers which may cause temporary slowdowns."
     }
   ],
   "history": [
@@ -47,4 +57,3 @@
     }
   ]
 }
-

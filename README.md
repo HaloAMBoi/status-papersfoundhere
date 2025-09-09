@@ -129,6 +129,59 @@ Each timeline entry must have:
 
 ---
 
+### 5. Upcoming Maintenance Advisories
+
+\```json
+{
+  "title": "Database Upgrade",
+  "type": "maintenance",
+  "scheduled_for": "2025-09-15T22:00:00Z",
+  "expected_duration": "2 hours",
+  "affects": ["Main Website", "Lookup Service"],
+  "message": "We will be upgrading the database servers which may cause temporary slowdowns."
+}
+\```
+
+- `title` → Brief summary of the maintenance event  
+- `type` → Always `"maintenance"`  
+- `scheduled_for` → ISO 8601 datetime string for when maintenance starts  
+- `expected_duration` → Estimated length of maintenance  
+- `affects` → Array of service names impacted  
+- `message` → Details or advisory for users  
+
+**Notes:**  
+- This section appears as a list of upcoming maintenance advisories on the status page.  
+- Advisories are sorted by their scheduled start time.
+
+---
+
+### Update your `status.json` example with the new field:
+
+\```json
+{
+  "global": {
+    "level": "green",
+    "message": "✅ All Systems Operational"
+  },
+  "services": [
+    { "name": "Main Website", "link": "https://www.papersfoundhere.org", "status": "Operational" },
+    { "name": "Lookup Service", "link": "https://lookup.papersfoundhere.org", "status": "Operational" }
+  ],
+  "active": [],
+  "upcoming": [
+    {
+      "title": "Database Upgrade",
+      "type": "maintenance",
+      "scheduled_for": "2025-09-15T22:00:00Z",
+      "expected_duration": "2 hours",
+      "affects": ["Main Website", "Lookup Service"],
+      "message": "We will be upgrading the database servers which may cause temporary slowdowns."
+    }
+  ],
+  "history": []
+}
+\```
+
 ## 💡 Adding Comments in JSON
 
 JSON **does not support comments** officially. Use a `_comment` field for inline notes:
