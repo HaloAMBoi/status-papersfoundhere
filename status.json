@@ -15,17 +15,26 @@
       "status": "Maintenance"
     }
   ],
-  "active": [],
-  "upcoming": [
+  "active": [
     {
-      "title": "Database Upgrade",
+      "service": "Lookup Service",
       "type": "maintenance",
-      "scheduled_for": "2025-09-15T22:00:00Z",
-      "expected_duration": "2 hours",
-      "affects": ["Main Website", "Lookup Service"],
-      "message": "We will be upgrading the database servers which may cause temporary slowdowns."
+      "title": "Under Maintenance",
+      "timeline": [
+        {
+          "time": "10:46 PM (GMT+3)",
+          "status": "Started",
+          "message": "Our team has started maintenance on our systems."
+        },
+        {
+          "time": "11:05 PM (GMT+3)",
+          "status": "Update",
+          "message": "Our team has completed 90% of transition work to our new system."
+        }
+      ]
     }
   ],
+  "upcoming": [],
   "history": [
     {
       "date": "2025-08-10",
