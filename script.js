@@ -47,7 +47,7 @@ async function loadStatus() {
 }
 
 function statusColor(status) {
-  switch (status.toLowerCase()) {
+  switch (status.toLowerCase().trim()) {
     case "operational": return "#4CAF50";
     case "degraded performance": return "#FFC107";
     case "major outage": return "#F44336";
@@ -57,7 +57,7 @@ function statusColor(status) {
 }
 
 function incidentColor(type) {
-  switch (type) {
+  switch (status.toLowerCase().trim()) {
     case "incident": return "yellow";
     case "outage": return "red";
     case "maintenance": return "blue";
