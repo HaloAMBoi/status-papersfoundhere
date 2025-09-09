@@ -15,25 +15,7 @@
       "status": "Maintenance"
     }
   ],
-  "active": [
-    {
-      "service": "Lookup Service",
-      "type": "maintenance",
-      "title": "Under Maintenance",
-      "timeline": [
-        {
-          "time": "10:46 PM (GMT+3)",
-          "status": "Started",
-          "message": "Our team has started maintenance on our systems."
-        },
-        {
-          "time": "11:05 PM (GMT+3)",
-          "status": "Update",
-          "message": "Our team has completed 90% of transition work to our new system."
-        }
-      ]
-    }
-  ],
+  "active": [],
   "upcoming": [
     {
       "title": "Database Upgrade",
