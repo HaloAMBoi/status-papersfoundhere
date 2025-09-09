@@ -12,31 +12,31 @@
     {
       "name": "Lookup Service",
       "link": "https://status.papersfoundhere.org",
-      "status": "Degraded Performance"
+      "status": "Maintenance"
     }
   ],
   "active": [
     {
       "service": "Lookup Service",
-      "title": "Degraded Performance",
+      "title": "Under Maintenance",
       "type": "incident",
       "timeline": [
         {
           "time": "10:46 PM (GMT+3)",
-          "status": "Investigating",
-          "message": "Our team is aware of a performance issue and is investigating."
+          "status": "Started",
+          "message": "Our team has started maintenance on our systems."
         },
         {
           "time": "11:05 PM (GMT+3)",
-          "status": "Identified",
-          "message": "We have identified the cause of the performance degradation."
+          "status": "Update",
+          "message": "Our team has completed 90% of transition work to our new system."
         }
       ]
     }
   ],
   "history": [
     {
-      "date": "2025-09-08",
+      "date": "2025-08-10",
       "service": "Main Website",
       "title": "Scheduled Maintenance Completed"
     },
