@@ -1,6 +1,6 @@
 {
   "global": {
-    "level": "blue",
+    "level": "green",
     "message": "All Systems Operational"
   },
   "services": [
