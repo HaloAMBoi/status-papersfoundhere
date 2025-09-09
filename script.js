@@ -57,12 +57,13 @@ function statusColor(status) {
 }
 
 function incidentColor(type) {
-  switch (status.toLowerCase().trim()) {
+  switch (type.toLowerCase().trim()) {
     case "incident": return "yellow";
     case "outage": return "red";
     case "maintenance": return "blue";
     default: return "yellow";
   }
 }
+
 
 loadStatus();
