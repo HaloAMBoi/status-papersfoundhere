@@ -130,8 +130,7 @@ Each timeline entry must have:
 ---
 
 ### 5. Upcoming Maintenance Advisories
-
-\```json
+```json
 {
   "title": "Database Upgrade",
   "type": "maintenance",
@@ -140,7 +139,7 @@ Each timeline entry must have:
   "affects": ["Main Website", "Lookup Service"],
   "message": "We will be upgrading the database servers which may cause temporary slowdowns."
 }
-\```
+```
 
 - `title` → Brief summary of the maintenance event  
 - `type` → Always `"maintenance"`  
