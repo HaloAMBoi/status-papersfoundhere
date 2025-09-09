@@ -19,7 +19,7 @@
     {
       "service": "Lookup Service",
       "title": "Under Maintenance",
-      "type": "incident",
+      "type": "maintenance",
       "timeline": [
         {
           "time": "10:46 PM (GMT+3)",
