@@ -1,6 +1,6 @@
 {
   "global": {
-    "message": "All Systems Operational",
+    "message": "Under Maintenance",
     "level": "blue"
   },
   "services": [
