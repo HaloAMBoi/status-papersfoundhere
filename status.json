@@ -1,0 +1,76 @@
+{
+  "global": {
+    "message": "Ongoing Scheduled Maintenance",
+    "level": "blue"
+  },
+  "services": [
+    {
+      "name": "Main Website",
+      "link": "https://www.papersfoundhere.org",
+      "status": "Operational"
+    },
+    {
+      "name": "Lookup Service",
+      "link": "https://status.papersfoundhere.org",
+      "status": "Degraded Performance"
+    },
+    {
+      "name": "API Service",
+      "link": "https://api.papersfoundhere.org",
+      "status": "Scheduled Maintenance"
+    }
+  ],
+  "active": [
+    {
+      "service": "Lookup Service",
+      "title": "Degraded Performance",
+      "type": "incident",
+      "timeline": [
+        {
+          "time": "10:46 PM (GMT+3)",
+          "status": "Investigating",
+          "message": "Our team is aware of a performance issue and is investigating."
+        },
+        {
+          "time": "11:05 PM (GMT+3)",
+          "status": "Identified",
+          "message": "We have identified the cause of the performance degradation."
+        }
+      ]
+    },
+    {
+      "service": "API Service",
+      "title": "Scheduled Maintenance",
+      "type": "maintenance",
+      "timeline": [
+        {
+          "time": "11:00 PM (GMT+3)",
+          "status": "Scheduled",
+          "message": "Routine maintenance started as planned."
+        },
+        {
+          "time": "11:30 PM (GMT+3)",
+          "status": "In Progress",
+          "message": "Maintenance is currently underway."
+        }
+      ]
+    }
+  ],
+  "history": [
+    {
+      "date": "2025-09-08",
+      "service": "Main Website",
+      "title": "Scheduled Maintenance Completed"
+    },
+    {
+      "date": "2025-09-07",
+      "service": "API Service",
+      "title": "Resolved Major Outage"
+    },
+    {
+      "date": "2025-09-06",
+      "service": "Lookup Service",
+      "title": "Resolved Minor Performance Issue"
+    }
+  ]
+}
