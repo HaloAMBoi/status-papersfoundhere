@@ -1,16 +1,16 @@
 {
   "global": {
-    "level": "green",
-    "message": "All Systems Operational"
+    "level": "blue",
+    "message": "System Maintenance Ongoing"
   },
   "services": [
     {
-      "name": "Past Papers Site",
+      "name": "Main Website",
       "link": "https://www.papersfoundhere.org",
       "status": "Operational"
     },
     {
-      "name": "Paper Lookup Tool",
+      "name": "Lookup Service",
       "link": "https://lookup.papersfoundhere.org",
       "status": "Operational"
     }
@@ -19,18 +19,13 @@
   "upcoming": [],
   "history": [
     {
-      "date": "10/09/2025",
-      "service": "Paper Lookup Tool",
+      "date": "2025-08-10",
+      "service": "Main Website",
       "title": "Scheduled Maintenance Completed"
     },
     {
-      "date": "10/08/2025",
-      "service": "Past Papers Site",
-      "title": "Scheduled Maintenance Completed"
-    },
-    {
-      "date": "06/09/2025",
-      "service": "Paper Lookup Tool",
+      "date": "2025-09-06",
+      "service": "Lookup Service",
       "title": "Resolved Minor Performance Issue"
     }
   ]

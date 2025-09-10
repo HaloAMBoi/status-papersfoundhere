@@ -95,7 +95,7 @@ function statusColor(status) {
     case "operational": return "#4CAF50";
     case "degraded performance": return "#FFC107";
     case "major outage": return "#F44336";
-    case "maintenance": return "#2196F3";
+    case "under maintenance": return "#2196F3";
     case "scheduled maintenance": return "#2196F3";
     default: return "#999";
   }
@@ -105,7 +105,7 @@ function incidentColor(type) {
   switch ((type || "").toLowerCase()) {
     case "incident": return "yellow";
     case "outage": return "red";
-    case "maintenance": return "blue";
+    case "under maintenance": return "blue";
     default: return "yellow";
   }
 }
