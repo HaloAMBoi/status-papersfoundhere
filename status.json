@@ -1,7 +1,7 @@
 {
   "global": {
-    "level": "blue",
-    "message": "System Maintenance Ongoing"
+    "level": "green",
+    "message": "All Systems Operational"
   },
   "services": [
     {
