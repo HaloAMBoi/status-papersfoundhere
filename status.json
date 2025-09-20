@@ -1,7 +1,7 @@
 {
   "global": {
     "level": "green",
-    "message": "All Systems Operational"
+    "message": "✅ All Systems Operational"
   },
   "services": [
     {
@@ -16,7 +16,16 @@
     }
   ],
   "active": [],
-  "upcoming": [],
+  "upcoming": [
+    {
+      "title": "Scheduled Maintenance",
+      "type": "maintenance",
+      "scheduled_for": "2025-09-20T21:00:00Z",
+      "expected_duration": "1 hour",
+      "affects": ["Lookup Service"],
+      "message": "We will be performing scheduled maintenance on the Lookup Service. The service may be unavailable during this period."
+    }
+  ],
   "history": [
     {
       "date": "2025-08-10",
@@ -30,3 +39,4 @@
     }
   ]
 }
+
