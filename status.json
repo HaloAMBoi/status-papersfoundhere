@@ -12,13 +12,13 @@
     {
       "name": "Lookup Service",
       "link": "https://lookup.papersfoundhere.org",
-      "status": "Maintenance"
+      "status": "Under Maintenance"
     }
   ],
   "active": [
     {
       "service": "Lookup Service",
-      "type": "maintenance",
+      "type": "under maintenance",
       "title": "Scheduled Maintenance In Progress",
       "timeline": [
         {
@@ -43,6 +43,7 @@
     }
   ]
 }
+
 
 
 
