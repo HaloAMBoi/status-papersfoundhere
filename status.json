@@ -16,7 +16,16 @@
     }
   ],
   "active": [],
-  "upcoming": [],
+  "upcoming": [
+    {
+      "title": "Planned Maintenance",
+      "type": "maintenance",
+      "scheduled_for": "2025-09-20T22:00:00Z",
+      "expected_duration": "1 hour",
+      "affects": "Lookup Service",
+      "message": "The Lookup Service will undergo scheduled maintenance. During this time, the lookup tool will be unavailable."
+    }
+  ],
   "history": [
     {
       "date": "2025-08-10",
