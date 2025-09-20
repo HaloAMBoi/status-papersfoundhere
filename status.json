@@ -1,7 +1,7 @@
 {
   "global": {
     "level": "green",
-    "message": "✅ All Systems Operational"
+    "message": "All Systems Operational"
   },
   "services": [
     {
@@ -35,6 +35,7 @@
     }
   ]
 }
+
 
 
 
