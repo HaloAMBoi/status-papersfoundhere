@@ -1,7 +1,7 @@
 {
   "global": {
     "level": "blue",
-    "message": "🔵 Lookup Service Under Maintenance"
+    "message": "Under Maintenance"
   },
   "services": [
     {
@@ -23,7 +23,7 @@
       "timeline": [
         {
           "time": "11:30 AM (GMT+3)",
-          "status": "In Progress",
+          "status": "Started",
           "message": "Scheduled maintenance for the Lookup Service is now underway. The service will be unavailable during this time."
         }
       ]
@@ -43,5 +43,6 @@
     }
   ]
 }
+
 
 
