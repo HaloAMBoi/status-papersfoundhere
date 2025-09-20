@@ -1,8 +1,9 @@
 # 📊 PapersFoundHere Status Page
 
-This repository hosts the **PapersFoundHere Status Page**, an Atlassian-style system status page for your users. It shows global status, individual service statuses, active incidents/maintenance, and a history of past issues.  
+This repository hosts the **PapersFoundHere Status Page**, a static Atlassian-style system status page.
+It shows **global system health**, **individual service statuses**, **active incidents/maintenance**, and a **history log** of past issues.
 
-The page is fully **static** and can be hosted on GitHub Pages or any free static webhost.
+The page is fully static and can be hosted on **GitHub Pages** or any free static webhost.
 
 ---
 
@@ -11,17 +12,17 @@ The page is fully **static** and can be hosted on GitHub Pages or any free stati
 ```
 status/
  ├── index.html      # Main status page
- ├── style.css       # CSS (can be embedded into index.html)
- ├── status.js       # JS to load and render JSON
- ├── status.json     # Data file containing services, incidents, and history
- └── logo.png        # Your logo
+ ├── style.css       # Styling (can also be inlined into index.html)
+ ├── status.js       # JS to load and render data
+ ├── status.json     # Core data file for services/incidents/maintenance
+ └── logo.png        # Project logo
 ```
 
 ---
 
 ## 🗂 Status JSON Structure
 
-The page reads `status.json` to display all information.  
+The entire status page is driven by `status.json`.
 
 ### 1. Global Status
 
@@ -32,16 +33,14 @@ The page reads `status.json` to display all information.
 }
 ```
 
-**Keywords for `level`**:
+**Valid `level` values:**
 
-| Keyword | Meaning | Color |
-|---------|---------|-------|
-| green   | All Systems Operational | ✅ Green |
-| yellow  | Degraded Performance   | ⚠️ Yellow |
-| red     | Major Outage           | 🔴 Red |
-| blue    | Maintenance            | 🔵 Blue |
-
-`message` → Custom text displayed in the banner (emoji optional).  
+| Level  | Meaning                 | Color     |
+| ------ | ----------------------- | --------- |
+| green  | All Systems Operational | ✅ Green   |
+| yellow | Degraded Performance    | ⚠️ Yellow |
+| red    | Major Outage            | 🔴 Red    |
+| blue   | Maintenance             | 🔵 Blue   |
 
 ---
 
@@ -55,14 +54,14 @@ The page reads `status.json` to display all information.
 }
 ```
 
-**Keywords for `status`**:
+**Valid `status` values:**
 
-| Keyword               | Meaning           | Color |
-|-----------------------|-----------------|-------|
-| Operational           | Fully working    | ✅ Green |
-| Degraded Performance  | Partial issues   | ⚠️ Yellow |
-| Major Outage          | Service down     | 🔴 Red |
-| Maintenance           | Under maintenance| 🔵 Blue |
+| Status               | Meaning           | Color     |
+| -------------------- | ----------------- | --------- |
+| Operational          | Fully working     | ✅ Green   |
+| Degraded Performance | Partial issues    | ⚠️ Yellow |
+| Major Outage         | Service down      | 🔴 Red    |
+| Maintenance          | Under maintenance | 🔵 Blue   |
 
 ---
 
@@ -71,45 +70,30 @@ The page reads `status.json` to display all information.
 ```json
 {
   "service": "Lookup Service",
-  "type": "incident",
-  "title": "Degraded Performance",
+  "type": "maintenance",
+  "title": "Database Upgrade",
   "timeline": [
     {
-      "time": "10:30 PM (GMT+3)",
-      "status": "Investigating",
-      "message": "Users may experience delays."
+      "time": "12:00 AM (GMT+3)",
+      "status": "In Progress",
+      "message": "Lookup Service is undergoing scheduled maintenance."
     }
   ]
 }
 ```
 
-**Keywords for `type`**:
+**Valid `type` values:**
 
-| Keyword      | Meaning                   | Color |
-|--------------|--------------------------|-------|
-| incident     | Degraded/partial problem  | Yellow |
-| outage       | Major outage             | Red    |
-| maintenance  | Scheduled/ongoing maintenance | Blue |
+| Type        | Meaning               | Color     |
+| ----------- | --------------------- | --------- |
+| incident    | Minor/partial problem | ⚠️ Yellow |
+| outage      | Major outage          | 🔴 Red    |
+| maintenance | Scheduled maintenance | 🔵 Blue   |
 
-**Timeline `status` keywords**:
+**Timeline `status` values:**
 
-- **Incidents / Outages**:  
-  - Investigating  
-  - Identified  
-  - Update  
-  - Monitoring  
-  - Resolved  
-
-- **Maintenance**:  
-  - Scheduled  
-  - In Progress  
-  - Verifying  
-  - Completed  
-
-Each timeline entry must have:  
-- `time` → Timestamp (string)  
-- `status` → One of the keywords above  
-- `message` → Description of update  
+* Incidents/Outages → Investigating, Identified, Update, Monitoring, Resolved
+* Maintenance → Scheduled, In Progress, Verifying, Completed
 
 ---
 
@@ -117,46 +101,65 @@ Each timeline entry must have:
 
 ```json
 {
-  "date": "09 Sept 2025",
+  "date": "21 Sept 2025",
   "service": "Lookup Service",
-  "title": "Outage resolved"
+  "title": "Scheduled maintenance completed"
 }
 ```
 
-- `date` → Date of incident/maintenance  
-- `service` → Name of affected service  
-- `title` → Short description of event  
+* `date` → Date of event
+* `service` → Affected service
+* `title` → Short description
 
 ---
 
 ### 5. Upcoming Maintenance Advisories
+
 ```json
 {
   "title": "Database Upgrade",
   "type": "maintenance",
-  "scheduled_for": "2025-09-15T22:00:00Z",
-  "expected_duration": "2 hours",
-  "affects": ["Main Website", "Lookup Service"],
-  "message": "We will be upgrading the database servers which may cause temporary slowdowns."
+  "scheduled_for": "2025-09-21T00:00:00+03:00",
+  "expected_duration": "1 hour",
+  "affects": ["Lookup Service"],
+  "message": "Scheduled maintenance window for Lookup Service."
 }
 ```
 
-- `title` → Brief summary of the maintenance event  
-- `type` → Always `"maintenance"`  
-- `scheduled_for` → ISO 8601 datetime string for when maintenance starts  
-- `expected_duration` → Estimated length of maintenance  
-- `affects` → Array of service names impacted  
-- `message` → Details or advisory for users  
+* `title` → Brief description
+* `type` → Always `"maintenance"`
+* `scheduled_for` → ISO datetime for start
+* `expected_duration` → Estimated time
+* `affects` → Array of affected services
+* `message` → User-facing advisory
 
-**Notes:**  
-- This section appears as a list of upcoming maintenance advisories on the status page.  
-- Advisories are sorted by their scheduled start time.
+Advisories show **before** maintenance starts.
 
 ---
 
-### Update your `status.json` example with the new field:
+## 💡 JSON Notes
 
-\```json
+* JSON does **not** support comments.
+* Use `_comment` fields for notes:
+
+```json
+{
+  "_comment": "This is ignored by the status page",
+  "global": { "level": "green", "message": "✅ All Systems Operational" }
+}
+```
+
+---
+
+## 🔄 Auto Refresh
+
+The status page **auto-refreshes every 60s**, so `status.json` edits show live quickly.
+
+---
+
+## 📝 Example `status.json`
+
+```json
 {
   "global": {
     "level": "green",
@@ -169,74 +172,31 @@ Each timeline entry must have:
   "active": [],
   "upcoming": [
     {
-      "title": "Database Upgrade",
+      "title": "Lookup Service Maintenance",
       "type": "maintenance",
-      "scheduled_for": "2025-09-15T22:00:00Z",
-      "expected_duration": "2 hours",
-      "affects": ["Main Website", "Lookup Service"],
-      "message": "We will be upgrading the database servers which may cause temporary slowdowns."
+      "scheduled_for": "2025-09-21T00:00:00+03:00",
+      "expected_duration": "1 hour",
+      "affects": ["Lookup Service"],
+      "message": "Scheduled maintenance window for Lookup Service."
     }
   ],
   "history": []
 }
-\```
-
-## 💡 Adding Comments in JSON
-
-JSON **does not support comments** officially. Use a `_comment` field for inline notes:
-
-```json
-{
-  "_comment": "This is ignored by the status page",
-  "global": {
-    "level": "green",
-    "message": "✅ All Systems Operational"
-  }
-}
 ```
-
-> ⚠️ Avoid `//` or `/* */` comments; they will break JSON parsing.
-
----
-
-## 🔄 Auto Refresh
-
-The page automatically refreshes every **1 minute**, so changes in `status.json` are reflected live.  
-
----
-
-## 📝 Example `status.json` Template
-
-```json
-{
-  "global": {
-    "level": "green",
-    "message": "✅ All Systems Operational"
-  },
-  "services": [
-    {
-      "name": "Main Website",
-      "link": "https://www.papersfoundhere.org",
-      "status": "Operational"
-    },
-    {
-      "name": "Lookup Service",
-      "link": "https://lookup.papersfoundhere.org",
-      "status": "Operational"
-    }
-  ],
-  "active": [],
-  "history": []
-}
-```
-
-> Simply update `services`, `active`, and `history` with current status and incidents.  
 
 ---
 
 ## 🚀 Deployment
 
-1. Upload the folder to **GitHub Pages** or another static host.  
-2. Make sure `index.html`, `status.json`, and `logo.png` are in the same directory.  
-3. Update `status.json` whenever service status or incidents change.  
-4. Page auto-refreshes every 60 seconds.
+1. Upload repo to **GitHub Pages** or any static host.
+2. Ensure `index.html`, `status.json`, and `logo.png` are in the same folder.
+3. Update `status.json` whenever status changes.
+4. Page auto-refreshes every 1 minute.
+
+---
+
+## 👨‍💻 Dev Notes
+
+* Keep `status.json` clean and valid JSON.
+* Use ISO timestamps for `scheduled_for`.
+* Close maintenance events by moving them into `history` with a completion note.
