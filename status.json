@@ -1,7 +1,7 @@
 {
   "global": {
-    "level": "blue",
-    "message": "Under Maintenance"
+    "level": "green",
+    "message": "✅ All Systems Operational"
   },
   "services": [
     {
@@ -12,23 +12,10 @@
     {
       "name": "Lookup Service",
       "link": "https://lookup.papersfoundhere.org",
-      "status": "Under Maintenance"
+      "status": "Operational"
     }
   ],
-  "active": [
-    {
-      "service": "Lookup Service",
-      "type": "under maintenance",
-      "title": "Scheduled Maintenance In Progress",
-      "timeline": [
-        {
-          "time": "11:30 AM (GMT+3)",
-          "status": "Started",
-          "message": "Scheduled maintenance for the Lookup Service is now underway. The service will be unavailable during this time."
-        }
-      ]
-    }
-  ],
+  "active": [],
   "upcoming": [],
   "history": [
     {
@@ -40,10 +27,14 @@
       "date": "2025-09-06",
       "service": "Lookup Service",
       "title": "Resolved Minor Performance Issue"
+    },
+    {
+      "date": "2025-09-21",
+      "service": "Lookup Service",
+      "title": "Scheduled Maintenance Completed"
     }
   ]
 }
-
 
 
 
