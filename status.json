@@ -15,7 +15,20 @@
       "status": "Operational"
     }
   ],
-  "active": [],
+    "active": [
+    {
+      "service": "Lookup Service",
+      "type": "maintenance",
+      "title": "Under Maintenance",
+      "timeline": [
+        {
+          "time": "11:10 PM (GMT+3)",
+          "status": "Started",
+          "message": "Our team has started maintenance on our systems."
+        },
+      ]
+    }
+  ],
   "upcoming": [],
   "history": [
     {
@@ -30,3 +43,4 @@
     }
   ]
 }
+
