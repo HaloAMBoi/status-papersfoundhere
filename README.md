@@ -37,10 +37,10 @@ The entire status page is driven by `status.json`.
 
 | Level  | Meaning                 | Color     |
 | ------ | ----------------------- | --------- |
-| green  | All Systems Operational | ✅ Green   |
+| green  | All Systems Operational | ✅ Green  |
 | yellow | Degraded Performance    | ⚠️ Yellow |
 | red    | Major Outage            | 🔴 Red    |
-| blue   | Maintenance             | 🔵 Blue   |
+| blue   | Under Maintenance       | 🔵 Blue   |
 
 ---
 
@@ -88,7 +88,7 @@ The entire status page is driven by `status.json`.
 | ----------- | --------------------- | --------- |
 | incident    | Minor/partial problem | ⚠️ Yellow |
 | outage      | Major outage          | 🔴 Red    |
-| maintenance | Scheduled maintenance | 🔵 Blue   |
+| under maintenance | Scheduled maintenance | 🔵 Blue   |
 
 **Timeline `status` values:**
 
@@ -200,3 +200,4 @@ The status page **auto-refreshes every 60s**, so `status.json` edits show live q
 * Keep `status.json` clean and valid JSON.
 * Use ISO timestamps for `scheduled_for`.
 * Close maintenance events by moving them into `history` with a completion note.
+
