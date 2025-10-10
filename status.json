@@ -19,17 +19,23 @@
     {
       "service": "Lookup Service",
       "type": "Major Outage",
+      "title": "Major Outage of database and website",
       "timeline": [
         {
           "time": "12:00 AM (GMT+3)",
           "status": "In Progress",
-          "message": "Lookup Service is undergoing scheduled maintenance."
+          "message": "Investigating - Our team is currently investigating the site for what caused the outage and working to restore normal operations as quickly as possible."
         }
       ]
     }
   ],
   "upcoming": [],
   "history": [
+    {
+      "date": "2025-10-10",
+      "service": "(Unresolved) Lookup Service",
+      "title": "Major Outage of database and website"
+    },
     {
       "date": "2025-09-21",
       "service": "Lookup Service",
