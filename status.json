@@ -1,6 +1,6 @@
 {
   "global": {
-    "level": "green",
+    "level": "red",
     "message": "Major outage"
   },
   "services": [
