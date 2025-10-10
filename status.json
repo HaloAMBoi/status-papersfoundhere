@@ -18,7 +18,7 @@
   "active": [
     {
       "service": "Lookup Service",
-      "type": "Major Outage",
+      "type": "Outage",
       "title": "Major Outage of database and website",
       "timeline": [
         {
