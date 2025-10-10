@@ -22,9 +22,14 @@
       "title": "Major Outage of database and website",
       "timeline": [
         {
-          "time": "12:00 AM (GMT+3)",
-          "status": "In Progress",
-          "message": "Investigating - Our team is currently investigating the site for what caused the outage and working to restore normal operations as quickly as possible."
+          "time": "5:30 PM (GMT+3)",
+          "status": "Identified",
+          "message": "Our team has identified the root cause of the outage and is working on a fix."
+        },
+        {
+          "time": "4:00 PM (GMT+3)",
+          "status": "Investigating",
+          "message": "Our team is currently investigating the site for what caused the outage and working to restore normal operations as quickly as possible."
         }
       ]
     }
