@@ -1,7 +1,7 @@
 {
   "global": {
     "level": "green",
-    "message": "All Systems Operational"
+    "message": "Major outage"
   },
   "services": [
     {
@@ -12,10 +12,22 @@
     {
       "name": "Lookup Service",
       "link": "https://lookup.papersfoundhere.org",
-      "status": "Operational"
+      "status": "Major Outage"
     }
   ],
-  "active": [],
+  "active": [
+    {
+      "service": "Lookup Service",
+      "type": "Major Outage",
+      "timeline": [
+        {
+          "time": "12:00 AM (GMT+3)",
+          "status": "In Progress",
+          "message": "Lookup Service is undergoing scheduled maintenance."
+        }
+      ]
+    }
+  ],
   "upcoming": [],
   "history": [
     {
