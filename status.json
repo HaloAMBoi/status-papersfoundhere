@@ -1,7 +1,7 @@
 {
   "global": {
-    "level": "red",
-    "message": "Major outage"
+    "level": "green",
+    "message": "All Systems Operational"
   },
   "services": [
     {
@@ -12,33 +12,15 @@
     {
       "name": "Lookup Service",
       "link": "https://lookup.papersfoundhere.org",
-      "status": "Major Outage"
+      "status": "Operational"
     }
   ],
-  "active": [
-    {
-      "service": "Lookup Service",
-      "type": "Outage",
-      "title": "Major Outage of database and website",
-      "timeline": [
-        {
-          "time": "5:30 PM (GMT+3)",
-          "status": "Identified",
-          "message": "Our team has identified the root cause of the outage and is working on a fix."
-        },
-        {
-          "time": "4:00 PM (GMT+3)",
-          "status": "Investigating",
-          "message": "Our team is currently investigating the site for what caused the outage and working to restore normal operations as quickly as possible."
-        }
-      ]
-    }
-  ],
+  "active": [],
   "upcoming": [],
   "history": [
     {
       "date": "2025-10-10",
-      "service": "(Unresolved) Lookup Service",
+      "service": "Lookup Service",
       "title": "Major Outage of database and website"
     },
     {
